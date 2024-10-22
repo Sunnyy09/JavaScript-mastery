@@ -1,12 +1,12 @@
 // const Student = {
-//   name: "Sunny",
+//   name: "joy",
 //   age: 21,
 //   cgpa: 8.2,
 //   isPass: true,
 //   address: {
-//     village: "chanarthal kalan",
-//     city: "Sirhind",
-//     Dist: "Fatehgarh sahib",
+//     village: "abcd",
+//     city: "hns",
+//     Dist: "vrver",
 //     state: "Punjab",
 //   },
 // };
