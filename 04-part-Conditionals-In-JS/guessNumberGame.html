@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let gameNum = 15;
+      let userNum = prompt("Guess the Number: ");
+
+      //   while (gameNum != userNum) {
+      //     if (userNum > gameNum) {
+      //       console.log("Your Num is greater.");
+      //     } else if (userNum < gameNum) {
+      //       console.log("your num is smaller");
+      //     }
+      //     break;
+      //   }
+
+      while (gameNum != userNum) {
+        userNum = prompt("You guess the wrong number, please guess again: ");
+      }
+
+      console.log("Congratulations ! you guess the right number");
+    </script>
+  </body>
+</html>
