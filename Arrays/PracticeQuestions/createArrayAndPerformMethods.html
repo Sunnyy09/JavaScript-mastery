@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Create an array of numbers form 1 to n and perform some Methods on it.
+    </title>
+  </head>
+  <body>
+    <script>
+      let number = prompt("Enter a Number: ");
+
+      let array = [];
+
+      for (let i = 1; i <= number; i++) array[i - 1] = i;
+
+      console.log(array);
+
+      //Use the reduce method to calculate sum of all numbers of an array
+      let totalSum = array.reduce((sum, num) => sum + num, 0);
+      console.log(totalSum);
+
+      //Use the reuduce method to calculate product of all numbers in the array(FACTORIAL)
+      let factorial = array.reduce((product, num) => product * num);
+      console.log(factorial);
+    </script>
+  </body>
+</html>
