@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use of Ternary Operator</title>
+  </head>
+  <body>
+    <script>
+      let age = 21;
+      let canVote = age >= 18 ? "you can vote." : "you can't vote.";
+
+      console.log(canVote);
+
+      let score = 95;
+
+      let grade =
+        score >= 90
+          ? "A"
+          : score >= 80
+          ? "B"
+          : score >= 70
+          ? "C"
+          : score >= 60
+          ? "D"
+          : "E";
+
+      console.log(grade);
+    </script>
+  </body>
+</html>
