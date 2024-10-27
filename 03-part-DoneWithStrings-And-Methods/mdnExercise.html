@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const output = document.querySelector(".output ul");
+        //list.textContent = "";
+        const greetings = [
+          "Happy Birthday!",
+          "Merry Christmas my love",
+          "A happy Christmas to all the family",
+          "You're all I want for Christmas",
+          "Get well soon",
+        ];
+
+        for (const greeting of greetings) {
+          if (greeting.includes("Christmas")) {
+            const listItem = document.createElement("li");
+            listItem.textContent = greeting;
+            output.appendChild(listItem);
+          }
+        }
+
+        const list = document.querySelector(".cities ul");
+        const cities = ["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"];
+
+        for (const city of cities) {
+          // write your code just below here
+          const lowerCase = city.toLowerCase();
+          const firstLetter = lowerCase.slice(0, 1);
+          const upperCase = lowerCase.replace(
+            firstLetter,
+            firstLetter.toUpperCase()
+          );
+
+          const result = upperCase;
+          const listItem = document.createElement("li");
+          listItem.textContent = result;
+          list.appendChild(listItem);
+        }
+      });
+    </script>
+    <div class="output" style="min-height: 125px">
+      <ul></ul>
+    </div>
+
+    <div class="cities" style="min-height: 125px">
+      <ul></ul>
+    </div>
+  </body>
+</html>

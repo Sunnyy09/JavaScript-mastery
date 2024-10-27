@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Finding the length of a string
+      const browserType = "mozilla";
+      console.log(browserType.length);
+
+      //Retrieving a specific string character
+      console.log(browserType[0]);
+
+      console.log(browserType[browserType.length - 1]); //retrieve tha last word.
+
+      const string = "its my birthday";
+      console.log(string.charAt(2));
+      console.log(string.length);
+      console.log(string[5]);
+
+      //Testing if a string contains a substring
+      const myString = "mozilla";
+
+      if (myString.includes("zilla")) {
+        console.log("found");
+      } else {
+        console.log("Not found");
+      }
+
+      //Often you'll want to know if a string starts or ends with a particular substring.
+      //This is a common enough need that there are two special methods for this:
+      //startsWith() and endsWith():
+
+      const s = "birthday celebration";
+
+      if (s.startsWith("rth")) {
+        console.log("yes its starts with");
+      } else if (s.endsWith("ation")) {
+        console.log("yes its end with");
+      } else {
+        console.log("its not here!");
+      }
+
+      //Finding the position of a substring in a string
+      //You can find the position of a substring inside a larger string using the indexOf() method.
+      const tagline = "MDN - Resources for developers, by developers";
+      console.log(tagline.indexOf("developers")); // 20
+      console.log(tagline.indexOf("Resources"));
+      console.log(tagline.indexOf("by"));
+
+      /*Extracting a substring from a string
+You can extract a substring from a string using the slice() method. You pass it:
+the index at which to start extracting
+the index at which to stop extracting. This is exclusive, meaning that the character at this index is 
+not included in the extracted substring.*/
+
+      const extractString = "mozilla";
+      console.log(extractString.slice(1, 6)); // "ozi"
+
+      //If you know that you want to extract all of the remaining characters in a string after a
+      //certain character, you don't have to include the second parameter. Instead, you only
+      //need to include the character position from where you want to extract the remaining
+      //characters in a string. Try the following:
+
+      console.log(extractString.slice(3));
+
+      //   console.log(extractString.split());
+
+      //Changing case
+      //The string methods toLowerCase() and toUpperCase() take a string and convert all
+      //the characters to lower- or uppercase, respectively. This can be useful for example
+      // if you want to normalize all user-entered data before storing it in a database.
+
+      const radData = "My NaMe Is MuD";
+      console.log(radData.toLowerCase());
+      console.log(radData.toUpperCase());
+
+      //Updating parts of a string
+      //You can replace one substring inside a string with another substring using the replace()
+      // method.
+
+      const updateString = "mozilla";
+      const updated = browserType.replace("moz", "van");
+
+      console.log(updated);
+      console.log(updateString);
+
+      //Note that replace(), like many string methods, doesn't change the string it was called on,
+      // but returns a new string. If you want to update the original browserType variable,
+      //you would have to do something like this:
+
+      //Also note that we now have to declare browserType using let, not const, because we are reassigning it.
+      let returnNewString = "mozilla";
+      returnNewString = returnNewString.replace("moz", "van");
+
+      console.log(returnNewString);
+
+      //Be aware that replace() in this form only changes the first occurrence of the
+      //substring. If you want to change all occurrences, you can use replaceAll():
+
+      let quote = "To be or not to be"; //be be
+      quote = quote.replaceAll("be", "code");
+
+      console.log(quote);
+    </script>
+  </body>
+</html>
