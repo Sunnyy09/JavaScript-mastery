@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <!--Function Constructor
+            Function constrictor dynamically create a fucnion object at the runtime. 
+            Function created using the function constructor hve global scope only.
+            thr function constructor can be used to define the function at runtime but
+            you should used function constructor with caution as it can find verniabilities in the code. We san 
+            pass multiple arguments to the fucntion constructor . All arguments except the 
+            last arguments are the names of parameters.The last arguments are in the 
+            fucntion body. The fucntion constructor can be call with or without a new 
+            keyword to create a new function object.
+            All the parameter are strings(r1, r2, (optional names that use in the fucntion 
+            body)).These are traeted as the names of the parameter in the functionto be created.
+            This argumets conatain the statements compressing of the fucntion definition.-->
+    <script>
+      //   const func = new Function("p", "q", "return p * q");
+      //   document.getElementById("output").innerHTML =
+      //     "The value returned from the function is: " + func(5, 7);
+
+      const func2 = new Function("return 10 + 20");
+      document.getElementById("output").innerHTML =
+        "The value returned from the function is: " + func2();
+
+      // Function declaration or function expression as parameters
+      // Creating  func using fucntion constructor is less efficient tha creating a fucntion
+      // using a fucntion decarartion or function  and calling it with in the code .
+      // we can write muliple statemtns in the fucnton body , parameter or the function constructor.
+      // All statement are separated by semi-collons. we can create a fucntion with function
+      // decaration or function expression and passed it as a statement in the function
+      // body parameter -->
+
+      const add = new Function(
+        "const sum = function (a, b) {return  a+ b};  return sum"
+      )();
+      document.getElementById("output").innerHTML = add(5, 10); // 15
+    </script>
+  </body>
+</html>
