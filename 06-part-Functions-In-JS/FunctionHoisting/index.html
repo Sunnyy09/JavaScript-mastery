@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- The function hoisting is a default behaviour in which the function declaration are moved at the top of the
+    local scope before execution of the code. So you can call the fucntion in it scope before it is declared itis important
+to notived only declaration is hoisted not the initialiation so the variables and the fcntiion shoud have been initialized
+before the can be used , similar to the fucntion hoisting the variable hoisting is also default behaviour, the variable 
+declaration moved at the top of local scope. we can ue the fucntion bfore it have been declared 
+code snippet
+
+add(5,10); // 15
+function add(x, y){
+   return x + y;
+}
+--The fucntion add is called as before declaration. This is possible tbecause the interpreter hois the function declation
+to the top of the scope.
+
+function add(x, y){
+   return x + y;
+}
+add(5,10); // 15
+The fucntion hoisting only works with function declaration not with fucntion expression, sp if te function is defiined 
+with fucnion expressions it is not hois at the top.
+-->
+
+    <!--<p id = "output"> </p>
+   <script>
+      printMessage("Top");        
+      function printMessage(pos) {
+         document.getElementById("output").innerHTML += 
+         "The function is called from the " + pos + "<br/>";
+      }        
+      printMessage("Bottom");
+      
+   </script>-->
+    <!--In the example above, we have defined the printMessage() function, printing the position from where it is called.
+ Also, we call the printMessage() function before and after the function definition. It prints the output without any error as
+ the function is hoisted at the top of its scope. -->
+
+    <!--<p id="output"> </p>
+    <script>
+        // test("Top"); // Out of scope
+        if (1) {
+            test("Top"); // In the same scope
+            function test(pos) {
+                document.getElementById("output").innerHTML +=
+                    "The function is called from the " + pos + "<br/>";
+            }
+            test("Bottom"); // In the same scope
+        }
+    </script>-->
+    <!--In the example above, we have defined the function inside the 'if' block. 
+    So, the function is hoisted at the top of the 'if' block, and you can execute the function only inside the
+     'if' block before its initialization. You can't access the function outside the 'if' block.-->
+
+    <!--The hoisting is a very imporatant behaviour in the js , but is always adviceable to declare the function
+     or variable set the begin of the code since js always interpreted the code in the sequence if declataion , then initialization, usage.-->
+  </body>
+</html>
