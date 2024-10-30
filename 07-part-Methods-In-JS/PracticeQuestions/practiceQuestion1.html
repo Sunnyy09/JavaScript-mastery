@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter out the marks of students who scored 90+.</title>
+  </head>
+  <body>
+    <script>
+      let marks = [97, 85, 90, 78, 99, 88, 92, 95];
+
+      let maxMark = marks.filter((mark) => {
+        return mark > 90;
+      });
+      console.log(maxMark);
+    </script>
+  </body>
+</html>
