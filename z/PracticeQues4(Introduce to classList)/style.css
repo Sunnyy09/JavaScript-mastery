@@ -1,0 +1,12 @@
+.para {
+  color: red;
+  font-size: 2rem;
+}
+.newClass {
+  background-color: pink;
+  font-size: 3rem;
+}
+.paraClass {
+  font-style: italic;
+  text-decoration: line-through;
+}
