@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const person = {
+        name: ["harry", "aman"],
+        age: 25,
+        bio() {
+          console.log(
+            `${this.name[0]} and ${this.name[1]} is ${this.age} years old.`
+          );
+        },
+        introduceSelf() {
+          console.log(`Hi! I'm ${this.name[0]}`);
+        },
+      };
+      console.log(person.bio());
+      //Try the browser console for console the properties and methods.
+    </script>
+  </body>
+</html>
