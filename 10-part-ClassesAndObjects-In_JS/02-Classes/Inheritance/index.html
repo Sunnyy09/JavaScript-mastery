@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor() {
+          this.species = "homo species";
+        }
+        eat() {
+          console.log("eating");
+        }
+        sleep() {
+          console.log("sleeping");
+        }
+      }
+      class Engineer extends Person {
+        work() {
+          console.log("solve the problems");
+        }
+      }
+
+      class Doctor extends Person {
+        work() {
+          console.log("treat patients");
+        }
+      }
+
+      let Sunny = new Engineer();
+      let har = new Doctor();
+    </script>
+  </body>
+</html>
