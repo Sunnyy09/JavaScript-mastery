@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Write two functions, fetchUserData and fetchUserPosts, that simulate
+      fetching data from a server using Promises and demonstrate Promise
+      chaining.
+    </p>
+    <ol>
+      <li>
+        fetchUserData(userId):
+        <ul>
+          <li>Takes a userId as an argument.</li>
+          <li>
+            Returns a Promise that resolves after 2 seconds with an object
+            containing userId and name.
+          </li>
+          <li>
+            If userId is missing, it should reject with an error message "User
+            ID is required.".
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        fetchUserPosts(userId):
+        <ul>
+          <li>Takes the same userId as an argument.</li>
+          <li>
+            Returns a Promise that resolves after 1 second with an array of
+            posts for that user.
+          </li>
+          <li>
+            If userId is missing, it should reject with an error message "User
+            ID is required for fetching posts.".
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
