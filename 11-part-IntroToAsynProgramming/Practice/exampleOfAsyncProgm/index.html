@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example of Asynchronous Programming</title>
+  </head>
+  <body>
+    <script>
+      function getData() {
+        console.log("You can read data after 2s!");
+      }
+
+      setTimeout(getData, 2000); //timeout : 1s = 1000, 2s = 2000
+
+      //or we can pass the function into setTimeout
+      setTimeout(() => {
+        console.log("You can read data after 4s!");
+      }, 4000);
+
+      console.log(
+        "this print before the setTimeout function, this is not wait for execution of above function, and that's a asynchronous programming."
+      );
+    </script>
+  </body>
+</html>
