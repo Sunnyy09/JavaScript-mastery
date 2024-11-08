@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userName = prompt("Enter your Name: ");
+      let output;
+
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+      let random = getRandom(100, 1000);
+      //   console.log(random);
+
+      if (userName !== "") {
+        output = `Username should be "@${userName}${random}"`;
+        console.log(output);
+      } else {
+        userName = prompt("Please Enter a Name: ");
+      }
+    </script>
+  </body>
+</html>
