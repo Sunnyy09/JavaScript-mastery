@@ -1,0 +1,28 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+h1,
+p {
+  text-align: center;
+}
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.theme-toggle button {
+  color: white;
+  background-color: rgb(214, 106, 124);
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+body.dark-theme {
+  background-color: #333;
+  color: white;
+}
